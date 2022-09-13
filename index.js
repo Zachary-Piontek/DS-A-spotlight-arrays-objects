@@ -3,6 +3,8 @@
 // OUTPUT: the value of the 'name' attribute i.e. Benny
 // REQS: use destructuring and the function should be a single line
 
+import { brands } from "./data.js";
+
 export const getName = ({ name }) => {
   console.log(name);
   return name;
@@ -49,7 +51,7 @@ export const printUserInfo = ({
 //  getSum(1, 2, 3) === 6
 //  getSum(1, 2, 3, 4, 5) === 15
 export const getSum = (...numbers) => {
-  console.log("🚀 ~ file: index.js ~ line 40 ~ getSum ~ numbers", numbers)
+  // console.log("🚀 ~ file: index.js ~ line 40 ~ getSum ~ numbers", numbers)
   let sum = 0;
   numbers.forEach(numbers => sum = sum + numbers)
   return sum
@@ -91,6 +93,7 @@ export const addSneakerCount = ({ shoes }) => {
 // OUTPUT: the brand names listed
 // REQS: use Object.keys to solve
 export const getBrandNames = (brands) => {
+  console.log("🚀 ~ file: index.js ~ line 96 ~ getBrandNames ~ brands", brands)
   // console.log(brands);
   return Object.keys(brands);
 }
@@ -98,8 +101,8 @@ export const getBrandNames = (brands) => {
 // INPUT: brands from data.js
 // OUTPUT: total number of sneaker types across all brands (14)
 export const totalSneakerCount = (brands) => {
-  // console.log(shoes);
-  return Object.keys(shoes)
+  console.log("🚀 ~ file: index.js ~ line 104 ~ totalSneakerCount ~ brands", brands)
+  return Object.keys(brands)
 }
 
 // INPUT: An object
