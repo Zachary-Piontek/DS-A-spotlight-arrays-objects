@@ -51,7 +51,8 @@ export const printUserInfo = ({
 export const getSum = (...numbers) => {
   console.log("🚀 ~ file: index.js ~ line 40 ~ getSum ~ numbers", numbers)
   let sum = 0;
-  numbers.forEach(numbers => sum = sum + num)
+  numbers.forEach(numbers => sum = sum + numbers)
+  return sum
 }
 
 // INPUT: an unknown number of arguments
