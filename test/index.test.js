@@ -23,7 +23,7 @@ test('printAddress should return a formatted string', () => {
   expect(printAddress(input)).toBe('Bob Smith lives at 123 Main Street, Anytown, USA')
 })
 
-test.skip('printUserInfo should return a formatted string', () => {
+test('printUserInfo should return a formatted string', () => {
   const user = {
     username: 'bobloblaw',
     name: {
@@ -67,7 +67,7 @@ test.skip('addSneakerCount should append the sneaker count to the object', () =>
   expect(addSneakerCount(nike)).not.toBe(nike)
 })
 
-test.skip('getBrandNames should return an array of the names of the sneaker brands', () => {
+test('getBrandNames should return an array of the names of the sneaker brands', () => {
   expect(getBrandNames(brands)).toStrictEqual(['Nike', 'Puma', 'Adidas'])
 })
 
