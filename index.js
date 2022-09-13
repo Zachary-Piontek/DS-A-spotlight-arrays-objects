@@ -49,9 +49,9 @@ export const printUserInfo = ({
 //  getSum(1, 2, 3) === 6
 //  getSum(1, 2, 3, 4, 5) === 15
 export const getSum = (...numbers) => {
-  console.log("🚀 ~ file: index.js ~ line 40 ~ getSum ~ numbers", numbers)
   let sum = 0;
-  numbers.forEach(numbers => sum = sum + num)
+  numbers.forEach(numbers => sum = sum + numbers)
+  return sum
 }
 
 // INPUT: an unknown number of arguments
@@ -96,9 +96,14 @@ export const getBrandNames = (brands) => {
 
 // INPUT: brands from data.js
 // OUTPUT: total number of sneaker types across all brands (14)
-export const totalSneakerCount = (brands) => {
+export const totalSneakerCount = ({ brands: {
+  Nike: { shoes, ...rest },
+  Puma: { shoes, ...rest },
+  Adidas: { shoes, ...rest }
+}
+}) => {
   // console.log(shoes);
-  return Object.keys(shoes)
+  return Object.keys(brands)
 }
 
 // INPUT: An object
