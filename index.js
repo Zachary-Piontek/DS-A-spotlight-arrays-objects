@@ -36,7 +36,11 @@ export const printUserInfo = (user) => {
 // REQS: use rest parameters
 //  getSum(1, 2, 3) === 6
 //  getSum(1, 2, 3, 4, 5) === 15
-export const getSum = () => {}
+export const getSum = (...numbers) => {
+  console.log("🚀 ~ file: index.js ~ line 40 ~ getSum ~ numbers", numbers)
+  let sum = 0;
+  numbers.forEach(numbers => sum = sum + num)
+}
 
 // INPUT: an unknown number of arguments
 // OUTPUT: an array with the first two arguments destructured and the remaining in a nested array
@@ -67,7 +71,6 @@ export const getFirstTwoArgs = () => {}
 //    use spread operator to create a new object
 
 export const addSneakerCount = ({ shoes }) => {
-  console.log("🚀 ~ file: index.js ~ line 70 ~ addSneakerCount ~ shoes", shoes)
   return { sneakerCount: shoes.length };
 }
 
